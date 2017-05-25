@@ -1,0 +1,25 @@
+/**
+*
+* {{ properCase name }}
+*
+*/
+
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+{{#if wantCSS}}
+import styles from './styles.js';
+{{/if}}
+
+class {{ properCase name }} extends Component { // eslint-disable-line react/prefer-stateless-function
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>
+          {{ properCase name }}
+        </Text>
+      </View>
+    );
+  }
+}
+
+export default {{ properCase name }};

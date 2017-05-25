@@ -1,0 +1,27 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true
+    },
+    "plugins": [
+        "react",
+        "react-native"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "rules": {
+        "react-native/split-platform-components": 2,
+        "react-native/no-inline-styles": 2,
+        "semi": 2,
+        "comma-spacing": 2,
+        "no-console": 2,
+        "object-shorthand": 2,
+        "spaced-comment": 2,
+        "no-trailing-spaces": 2
+    }
+}

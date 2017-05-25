@@ -1,0 +1,42 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "generate": "plop --plopfile internals/generators/index.js",
+    "setup": "node ./internals/utils/startup.js",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
+    "test": "jest ./node_modules/eslint/bin/eslint.js"
+  },
+  "dependencies": {
+    "apollo-client": "^1.2.2",
+    "graphql-tag": "^2.1.0",
+    "immutable": "^3.8.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "react": "16.0.0-alpha.6",
+    "react-apollo": "^1.2.0",
+    "react-native": "0.44.0",
+    "react-navigation": "^1.0.0-beta.11",
+    "react-redux": "^5.0.5",
+    "realm": "^1.3.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
+    "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-preset-react-native": "1.9.2",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.1",
+    "jest": "20.0.4",
+    "plop": "^1.7.4",
+    "react-test-renderer": "16.0.0-alpha.6",
+    "shelljs": "^0.7.7"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

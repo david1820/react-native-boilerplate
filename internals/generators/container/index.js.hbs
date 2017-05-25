@@ -1,0 +1,48 @@
+/*
+ *
+ * {{properCase name }}
+ *
+ */
+
+import React from 'react';
+import { connect } from 'react-redux';
+import select{{ properCase name }} from './selectors';
+import {
+  Text,
+  View
+} from 'react-native';
+import styles from './styles.js';
+
+export class {{ properCase name }} extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>{{ properCase name }} container</Text>
+      </View>
+    );
+  }
+}
+
+{{properCase name}}.propTypes = {
+
+};
+
+{{properCase name}}.navigationOptions = ({ navigation, screenProps }) => ({ // eslint-disable-line
+  title: '{{properCase name}}',
+});
+
+{{#if wantActionsAndReducer}}
+const mapStateToProps = select{{ properCase name }}();
+{{/if}}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+  };
+}
+
+{{#if wantActionsAndReducer}}
+export default connect(mapStateToProps, mapDispatchToProps)({{ properCase name }});
+{{else}}
+export default connect(mapDispatchToProps)({{ properCase name }});
+{{/if}}
