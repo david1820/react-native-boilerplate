@@ -3,29 +3,17 @@
 * {{ properCase name }}
 *
 */
-
 import React from 'react';
-
-{{#if wantMessages}}
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
-{{/if}}
-
-{{#if wantCSS}}
-import styles from './styles.css';
-{{/if}}
+import { View, Text } from 'react-native';
+import styles from './styles.js';
 
 function {{ properCase name }}() {
   return (
-    {{#if wantCSS}}
-    <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
-    {{else}}
-    <div>
-    {{/if}}
-    {{#if wantMessages}}
-      <FormattedMessage {...messages.header} />
-    {{/if}}
-    </div>
+    <View style={styles.container}>
+      <Text>
+        {{ properCase name }}
+      </Text>
+    </View>
   );
 }
 
