@@ -1,3 +1,4 @@
+/* eslint-disable */
 // import Tabs from '../index';
 
 import expect from 'expect';

@@ -3,7 +3,7 @@
 * Tab
 *
 */
-
+/* eslint-disable */
 import React, { ReactElement, Component } from 'react'
 import {
   View,

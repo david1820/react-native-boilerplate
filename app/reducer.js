@@ -39,6 +39,6 @@ export default function rootReducers() {
     nav,
     apollo: apolloReducer,
     // REDUCERS
-    Home: Home,
+    Home,
   });
 }

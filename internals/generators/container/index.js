@@ -54,7 +54,7 @@ module.exports = {
         type: "modify",
         path: '../../app/reducer.js',
         pattern: /(\/\/ REDUCERS)/g,
-        template: '$1\n    {{properCase name}}: {{properCase name}},',
+        template: '$1\n    {{properCase name}},',
       },
     ];
 

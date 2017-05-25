@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, View, Image } from 'react-native';
 import BottomNavigation from '../BottomNavigation';
 import Tab from '../Tab/index';

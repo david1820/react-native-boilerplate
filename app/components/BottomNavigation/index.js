@@ -3,7 +3,7 @@
 * BottomNavigation
 *
 */
-
+/* eslint-disable */
 import React, { Component, PropTypes } from 'react';
 import { View } from 'react-native';
 

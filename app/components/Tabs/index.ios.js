@@ -4,7 +4,8 @@
 *
 */
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { TabBarIOS } from 'react-native';
 import rssFeedIcon from '../../assets/rss_feed.png';
 import accountIcon from '../../assets/account_circle.png';

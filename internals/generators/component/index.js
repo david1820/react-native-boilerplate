@@ -37,11 +37,6 @@ module.exports = {
       path: '../../app/components/{{properCase name}}/index.js',
       templateFile: data.type === 'ES6 Class' ? './component/es6.js.hbs' : './component/stateless.js.hbs',
       abortOnFail: true,
-    }, {
-      type: 'add',
-      path: '../../app/components/{{properCase name}}/tests/index.test.js',
-      templateFile: './component/test.js.hbs',
-      abortOnFail: true,
     }];
 
     // If they want a CSS file, add styles.css
