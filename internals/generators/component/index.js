@@ -24,11 +24,6 @@ module.exports = {
 
       return 'The name is required';
     },
-  }, {
-    type: 'confirm',
-    name: 'wantCSS',
-    default: true,
-    message: 'Does it have styling?',
   }],
   actions: data => {
     // Generate index.js and index.test.js
@@ -37,18 +32,13 @@ module.exports = {
       path: '../../app/components/{{properCase name}}/index.js',
       templateFile: data.type === 'ES6 Class' ? './component/es6.js.hbs' : './component/stateless.js.hbs',
       abortOnFail: true,
-    }];
-
-    // If they want a CSS file, add styles.css
-    if (data.wantCSS) {
-      actions.push({
+    },
+    {
         type: 'add',
         path: '../../app/components/{{properCase name}}/styles.js',
         templateFile: './component/styles.js.hbs',
         abortOnFail: true,
-      });
-    }
-
+    }];
     return actions;
   },
 };

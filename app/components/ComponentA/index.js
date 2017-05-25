@@ -1,6 +1,6 @@
 /**
 *
-* {{ properCase name }}
+* ComponentA
 *
 */
 
@@ -8,16 +8,16 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import styles from './styles.js';
 
-class {{ properCase name }} extends Component { // eslint-disable-line react/prefer-stateless-function
+class ComponentA extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <View style={styles.container}>
         <Text>
-          {{ properCase name }}
+          ComponentA
         </Text>
       </View>
     );
   }
 }
 
-export default {{ properCase name }};
+export default ComponentA;
