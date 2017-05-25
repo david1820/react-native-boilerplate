@@ -28,6 +28,8 @@ cd boilerplate
 Install dependencies:
 ```js
 npm install
+
+npm run setup
 ```
 
 Start the app:
