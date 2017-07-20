@@ -22,6 +22,11 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 
+# PODS
+ios/Pods
+ios/Podfile.lock
+ios/*.xcworkspace
+
 # Android/IntelliJ
 #
 build/
@@ -51,3 +56,10 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+
+android/fastlane/report.xml
+android/fastlane/Preview.html
+android/fastlane/screenshots
+
+# waste
+android/app/src/main/assets/editor.html
