@@ -22,22 +22,22 @@ Inspired from [React-boilerplate - A highly scalable, offline-first foundation w
 Default name is 'boilerplate' and if you open your project on Xcode or Android Studio this is how you see its name, to change it follow the next steps:
 - First make a copy of the react-native-boilerplate directory. And go to your newly cloned directory.
 - Change the app name at index.ios.js and index.android.js files which is given as a parameter to AppRegistry.
-```sh
-#change this line
+```js
+// Change this line
 change AppRegistry.registerComponent('boilerplate', () => App);
 
-#to this
+// To this
 AppRegistry.registerComponent('your-desire-app-name', () => App);
 ```
 - Change the name and version accordingly on cloned-directory/package.json
-```sh
-#change this
+```js
+// Change this
 {
   "name": "boilerplate",
   "displayName": "boilerplate"
 }
 
-#to this
+// To this
 {
   "name": "your-desire-app-name",
   "displayName": "your-desire-app-name"
@@ -45,11 +45,11 @@ AppRegistry.registerComponent('your-desire-app-name', () => App);
 ```
 - Delete /ios and /android folders which are remaining from your older app.
 - To generate /ios and /android folders again run.
-```js
+```sh
 react-native upgrade
 ```
 - For any native dependency run.
-```js
+```sh
 react-native link
 ```
 - Finally run react-native run-ios or anything you want.
