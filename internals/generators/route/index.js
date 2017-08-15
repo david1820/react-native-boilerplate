@@ -56,7 +56,7 @@ module.exports = {
       actions.push({
           type: "modify",
           path: '../../app/routes.js',
-          pattern: /(\/\/ NAVIGATION ROUTE)/g,
+          pattern: /(const Routes = {)/g,
           template: '$1\n  {{ component }}: { screen: {{ component }} },',
 
       });

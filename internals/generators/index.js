@@ -7,11 +7,13 @@
 const fs = require('fs');
 const componentGenerator = require('./component/index.js');
 const containerGenerator = require('./container/index.js');
+const hocGenereator = require('./hoc/index');
 const routeGenerator = require('./route/index.js');
 
 module.exports = (plop) => {
   plop.setGenerator('component', componentGenerator);
   plop.setGenerator('container', containerGenerator);
+  plop.setGenerator('HOC', hocGenereator);
   plop.setGenerator('navigation-route', routeGenerator);
   plop.addHelper('directory', (comp) => {
     try {

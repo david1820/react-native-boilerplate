@@ -9,17 +9,20 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import selectHome from './selectors';
 import {
-  Text,
   View
 } from 'react-native';
+import Login from '../../components/Login';
+import Card from '../../components/Card';
+import Button from '../../components/Button';
 import styles from './styles.js';
 
 export class Home extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
-    const { nombre } = this.props;
     return (
       <View style={styles.container}>
-       <Text>{nombre}</Text>
+        <Login name={'David'} />
+        <Card />
+        <Button />
       </View>
     );
   }

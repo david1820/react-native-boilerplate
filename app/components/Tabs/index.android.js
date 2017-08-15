@@ -15,12 +15,12 @@ class Tabs extends Component { // eslint-disable-line react/prefer-stateless-fun
     const { profileElement, newsListElement } = this.props;
     const { selectedTab } = this.state;
     switch (selectedTab) {
-      case 0:
-        return newsListElement;
-      case 1:
-        return profileElement;
-      default:
-        return newsListElement;
+    case 0:
+      return newsListElement;
+    case 1:
+      return profileElement;
+    default:
+      return newsListElement;
     }
   }
   render() {

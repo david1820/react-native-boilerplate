@@ -1,6 +1,6 @@
 /**
 *
-* {{ properCase name }}
+* Card
 *
 */
 import React from 'react';
@@ -8,14 +8,14 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import styles from './styles.js';
 
-const {{ properCase name }} = () => {
+const Card = () => {
   return (
     <View style={styles.container}>
-      <Text>{{ properCase name }} Stateless component</Text>
+      <Text>Card Stateless component</Text>
     </View>
   );
 };
 
-{{ properCase name }}.propTypes = {};
+Card.propTypes = {};
 
-export default {{ properCase name }};
+export default Card;

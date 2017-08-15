@@ -47,13 +47,13 @@ module.exports = {
       {
         type: "modify",
         path: '../../app/reducer.js',
-        pattern: /(\/\/ IMPORTS CONTAINERS REDUCERS)/g,
+        pattern: /(import { apolloReducer } from '.\/apolloClient';)/g,
         template: '$1\nimport {{properCase name}} from \'./containers/{{properCase name}}/reducer\';',
       },
       {
         type: "modify",
         path: '../../app/reducer.js',
-        pattern: /(\/\/ REDUCERS)/g,
+        pattern: /(return combineReducers\({)/g,
         template: '$1\n    {{properCase name}},',
       },
     ];

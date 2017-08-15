@@ -9,9 +9,9 @@ const initialRouteName = 'Home';
 export const AppNavigator = StackNavigator(Routes, { initialRouteName });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
-   <View style={styles.container}>
+  <View style={styles.container}>
     <StatusBar
-        barStyle="light-content"
+        barStyle="dark-content"
     />
     <AppNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
   </View>
