@@ -49,7 +49,7 @@ module.exports = {
       actions.push({
           type: "modify",
           path: '../../app/routes.js',
-          pattern: /(\/\/ IMPORT MODULE FILES)/g,
+          pattern:  /(import { StackNavigator } from 'react-navigation';)/g,
           template: '$1\nimport {{ component }} from \'./containers/{{ component }}/index\';',
 
       });

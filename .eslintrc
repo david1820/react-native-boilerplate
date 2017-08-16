@@ -31,6 +31,7 @@
         "no-console": 2,
         "object-shorthand": 2,
         "spaced-comment": 2,
-        "no-trailing-spaces": 2
+        "no-trailing-spaces": 2,
+        "quotes": [2, "single"]
     }
 }

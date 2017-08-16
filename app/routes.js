@@ -1,8 +1,12 @@
-// IMPORT MODULE FILES
+import { StackNavigator } from 'react-navigation';
 import Home from './containers/Home/index';
 
 const Routes = {
   Home: { screen: Home },
 };
 
-export default Routes;
+
+const initialRouteName = 'Home';
+const AppNavigator = StackNavigator(Routes, { initialRouteName });
+
+export default AppNavigator;

@@ -1,7 +1,9 @@
 import { fromJS } from 'immutable';
 import { combineReducers } from 'redux';
-import { AppNavigator } from './navigation';
+import AppNavigator from './routes';
 import { apolloReducer } from './apolloClient';
+import Perfil from './containers/Perfil/reducer';
+import Prueba from './containers/Prueba/reducer';
 import Home from './containers/Home/reducer';
 
 const appInitialState = fromJS({
@@ -30,6 +32,8 @@ function nav(state, action) {
 
 export default function rootReducers() {
   return combineReducers({
+    Perfil,
+    Prueba,
     Home,
     nav,
     App: appReducer,

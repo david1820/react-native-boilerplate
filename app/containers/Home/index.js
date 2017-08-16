@@ -22,7 +22,7 @@ export class Home extends React.Component { // eslint-disable-line react/prefer-
       <View style={styles.container}>
         <Login name={'David'} />
         <Card />
-        <Button />
+        <Button onPress={() => {}} />
       </View>
     );
   }

@@ -28,7 +28,14 @@ module.exports = {
     name: 'wantApolloQueries',
     default: true,
     message: 'Do you want an Apollo Queries/Mutations tupel for this container?',
-  }],
+  },
+  {
+    type: 'confirm',
+    name: 'wantNavigationRoute',
+    default: false,
+    message: 'Do you want create a Navigation Route for this container?',
+  }
+],
   actions: data => {
     // Generate index.js and index.test.js
     const actions = [
@@ -64,6 +71,25 @@ module.exports = {
         path: '../../app/containers/{{properCase name}}/queries.js',
         templateFile: './container/queries.js.hbs',
         abortOnFail: true,
+      });
+    }
+
+    if (data.wantNavigationRoute) {
+      // Import container
+        actions.push({
+          type: "modify",
+          path: '../../app/routes.js',
+          pattern:  /(import { StackNavigator } from 'react-navigation';)/g,
+          template: '$1\nimport {{ properCase name }} from \'./containers/{{ properCase name }}/index\';',
+
+      });
+      // Create Route
+      actions.push({
+          type: "modify",
+          path: '../../app/routes.js',
+          pattern: /(const Routes = {)/g,
+          template: '$1\n  {{ properCase name }}: { screen: {{ properCase name }} },',
+
       });
     }
 
