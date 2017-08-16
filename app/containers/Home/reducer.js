@@ -10,7 +10,7 @@ import {
 } from './constants';
 
 const initialState = fromJS({
-  nombre: 'HOME CONTAINER'
+  nombre: 'HOME CONTAINER',
 });
 
 function homeReducer(state = initialState, action) {

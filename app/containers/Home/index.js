@@ -5,11 +5,10 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import selectHome from './selectors';
 import {
-  View
+  View,
 } from 'react-native';
 import Login from '../../components/Login';
 import Card from '../../components/Card';
@@ -17,10 +16,15 @@ import Button from '../../components/Button';
 import styles from './styles.js';
 
 export class Home extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  state = {
+    name: 'david',
+  };
   render() {
     return (
       <View style={styles.container}>
-        <Login name={'David'} />
+        <Login
+          name={'David'}
+        />
         <Card />
         <Button onPress={() => {}} />
       </View>
@@ -29,7 +33,6 @@ export class Home extends React.Component { // eslint-disable-line react/prefer-
 }
 
 Home.propTypes = {
-  nombre: PropTypes.string,
 };
 
 Home.navigationOptions = ({ navigation, screenProps }) => ({ // eslint-disable-line

@@ -20,7 +20,7 @@ AppWithNavigationState.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  nav: state.nav
+  nav: state.nav,
 });
 
 const styles = StyleSheet.create({

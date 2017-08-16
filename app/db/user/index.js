@@ -8,7 +8,7 @@ const UserSchema = {
     name: 'string',
     profilePic: 'string',
     jwt: 'string',
-  }
+  },
 };
 
 export default UserSchema;
