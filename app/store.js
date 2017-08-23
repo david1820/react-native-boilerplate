@@ -5,14 +5,14 @@ import client from './apolloClient';
 
 const loggerMiddleware = createLogger({ predicate: (getState, action) => __DEV__ }); // eslint-disable-line
 const store = createStore (
-    rootReducers(),
-    {}, // initial state
-    compose(
-      applyMiddleware(
-        client.middleware(),
-        loggerMiddleware
-      ),
-    )
+  rootReducers(),
+  {}, // initial state
+  compose(
+    applyMiddleware(
+      client.middleware(),
+      loggerMiddleware
+    ),
+  )
 );
 
 export default store;

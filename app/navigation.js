@@ -2,16 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, StatusBar, View } from 'react-native';
 import { connect } from 'react-redux';
-import { addNavigationHelpers, StackNavigator } from 'react-navigation';
-import Routes from './routes';
-
-const initialRouteName = 'Home';
-export const AppNavigator = StackNavigator(Routes, { initialRouteName });
+import { addNavigationHelpers } from 'react-navigation';
+import AppNavigator from './routes';
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
-   <View style={styles.container}>
+  <View style={styles.container}>
     <StatusBar
-        barStyle="light-content"
+      barStyle="dark-content"
     />
     <AppNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
   </View>
@@ -23,7 +20,7 @@ AppWithNavigationState.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  nav: state.nav
+  nav: state.nav,
 });
 
 const styles = StyleSheet.create({

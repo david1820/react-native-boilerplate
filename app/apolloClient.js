@@ -1,7 +1,7 @@
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 
 const networkInterface = createNetworkInterface({
-  uri: 'http://url-from-your-api/graphql'
+  uri: 'http://url-from-your-api/graphql',
 });
 networkInterface.use([{
   applyMiddleware(req, next) {
@@ -12,7 +12,7 @@ networkInterface.use([{
     const token = 'token';
     req.options.headers.authorization = token ? `Bearer ${token}` : null;
     next();
-  }
+  },
 }]);
 
 const client = new ApolloClient({

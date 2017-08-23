@@ -1,11 +1,12 @@
-// IMPORT MODULE FILES
+import { StackNavigator } from 'react-navigation';
 import Home from './containers/Home/index';
 
-
-// La primer pantalla que coloquemos se pintara.
 const Routes = {
-  // NAVIGATION ROUTE
   Home: { screen: Home },
 };
 
-export default Routes;
+
+const initialRouteName = 'Home';
+const AppNavigator = StackNavigator(Routes, { initialRouteName });
+
+export default AppNavigator;

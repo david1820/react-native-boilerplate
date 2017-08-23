@@ -10,15 +10,15 @@ import {
 } from './constants';
 
 const initialState = fromJS({
-  nombre: 'HOME CONTAINER'
+  nombre: 'HOME CONTAINER',
 });
 
 function homeReducer(state = initialState, action) {
   switch (action.type) {
-    case DEFAULT_ACTION:
-      return state;
-    default:
-      return state;
+  case DEFAULT_ACTION:
+    return state;
+  default:
+    return state;
   }
 }
 
