@@ -1,0 +1,38 @@
+{
+	"name": "boilerplate",
+	"version": "0.0.2",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"generate": "plop --plopfile internals/generators/index.js",
+		"setup": "node ./internals/utils/startup.js",
+		"lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
+		"lint": "npm run lint:eslint -- . ",
+		"test": "./node_modules/eslint/bin/eslint.js . "
+	},
+	"dependencies": {
+		"apollo-client": "^1.9.1",
+		"graphql-tag": "^2.4.2",
+		"immutable": "^3.8.1",
+		"lodash": "^4.17.4",
+		"moment": "^2.18.1",
+		"react": "16.0.0-alpha.12",
+		"react-apollo": "^1.4.14",
+		"react-native": "0.47.2",
+		"react-navigation": "^1.0.0-beta.11",
+		"react-redux": "^5.0.6",
+		"realm": "^1.10.3",
+		"redux": "^3.7.2",
+		"redux-logger": "^3.0.6",
+		"reselect": "^3.0.1"
+	},
+	"devDependencies": {
+		"babel-jest": "20.0.3",
+		"babel-preset-react-native": "3.0.1",
+		"jest": "20.0.4",
+		"react-test-renderer": "16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
